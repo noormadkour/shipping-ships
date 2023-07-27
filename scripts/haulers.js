@@ -5,9 +5,9 @@ export const haulerList = () => {
   let haulerHTML = `<ul>`;
   for (const hauler of haulers) {
     haulerHTML += `<li data-type="hauler"
-                      data-id="${hauler.id}>
+                      data-id="${hauler.id}">
 Hauler #${hauler.id} is named ${hauler.haulerName}, and is docked at ${hauler.dock_location}</li>`;
   }
-  haulerHTML += `</ul>`
+  haulerHTML += `</ul>`;
   return haulerHTML;
 };
