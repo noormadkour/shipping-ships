@@ -10,33 +10,39 @@ const database = {
       id: 1,
       haulerName: "Haulin' Shanghai Surprise",
       dock_location: "Shanghai, China",
+      dock_id: 1,
     },
     {
       id: 2,
       haulerName: "Busan the Move",
       dock_location: "Busan, South Korea",
+      dock_id: 2,
     },
     {
       id: 3,
       haulerName: "Rockin' Rotterdam",
       dock_location: "Rotterdam, The Netherlands",
+      dock_id: 3,
     },
     {
       id: 4,
       haulerName: "Antwerp-tunity Knocks",
       dock_location: "Antwerp, Belgium",
+      dock_id: 4
     },
-    { id: 5, haulerName: "Seas the Day", dock_location: "Antwerp, Belgium" },
-    { id: 6, haulerName: "Knot on Call", dock_location: "Shanghai, China" },
+    { id: 5, haulerName: "Seas the Day", dock_location: "Antwerp, Belgium",dock_id: 4,},
+    { id: 6, haulerName: "Knot on Call", dock_location: "Shanghai, China", dock_id: 1 },
     {
       id: 7,
       haulerName: "Anchorman",
       dock_location: "Rotterdam, The Netherlands",
+      dock_id: 3,
     },
     {
       id: 8,
       haulerName: "The Salty Mermaid",
       dock_location: "Busan, South Korea",
+      dock_id: 2,
     },
   ],
   ships: [
