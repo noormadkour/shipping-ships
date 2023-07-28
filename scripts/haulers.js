@@ -12,10 +12,10 @@ Hauler #${hauler.id} is named ${hauler.haulerName}, and is docked at ${hauler.do
   return haulerHTML;
 };
 
-document.addEventListener("click", (clickEvent) => {
-  const clickedItem = clickEvent.target;
-  if (clickedItem.dataset.type === "hauler") {
-    const haulerId = clickedItem.dataset.id;
+document.addEventListener("click", (haulerClick) => {
+  const clickedHauler = haulerClick.target;
+  if (clickedHauler.dataset.type === "hauler") {
+    const haulerId = clickedHauler.dataset.id;
     let counter = 0;
     const ships = getShips();
     for (const ship of ships) {
