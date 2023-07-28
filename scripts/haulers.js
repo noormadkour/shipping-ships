@@ -1,4 +1,4 @@
-import { getHaulers } from "./database.js";
+import { getHaulers, getShips } from "./database.js";
 
 export const haulerList = () => {
   const haulers = getHaulers();
@@ -11,3 +11,18 @@ Hauler #${hauler.id} is named ${hauler.haulerName}, and is docked at ${hauler.do
   haulerHTML += `</ul>`;
   return haulerHTML;
 };
+
+document.addEventListener("click", (clickEvent) => {
+  const clickedItem = clickEvent.target;
+  if (clickedItem.dataset.type === "hauler") {
+    const haulerId = clickedItem.dataset.id;
+    let counter = 0;
+    const ships = getShips();
+    for (const ship of ships) {
+      if (parseInt(haulerId) === ship.haulerId) {
+        counter++;
+      }
+    }
+    window.alert(`This hauler is carrying ${counter} shipping ships`);
+  }
+});

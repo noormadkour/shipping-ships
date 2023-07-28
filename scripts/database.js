@@ -40,18 +40,59 @@ const database = {
     },
   ],
   ships: [
-    { id: 1, shipName: "Ship Happens", hauler: "Haulin' Shanghai Surprise" },
-    { id: 2, shipName: "Seas the Moment", hauler: "Haulin' Shanghai Surprise" },
-    { id: 3, shipName: "Boatload of Fun", hauler: "Busan the Move" },
-    { id: 4, shipName: "Sailabration", hauler: "Busan the Move" },
-    { id: 5, shipName: "Nauti Buoy", hauler: "Rockin' Rotterdam" },
-    { id: 6, shipName: "Unsinkable II", hauler: "Rockin' Rotterdam" },
-    { id: 7, shipName: "Anchors Aweigh", hauler: "Antwerp-tunity Knocks" },
-    { id: 8, shipName: "Knotical Nonsense", hauler: "Antwerp-tunity Knocks" },
-    { id: 9, shipName: "The Salty Seahorse", hauler: "The Salty Mermaid" },
-    { id: 10, shipName: "Buoyant Beauty", hauler: "The Salty Mermaid" },
-    { id: 11, shipName: "Shipshape", hauler: "Knot on Call" },
-    { id: 12, shipName: "Shipfaced", hauler: "Knot on Call" },
+    {
+      id: 1,
+      shipName: "Ship Happens",
+      hauler: "Haulin' Shanghai Surprise",
+      haulerId: 1,
+    },
+    {
+      id: 2,
+      shipName: "Seas the Moment",
+      hauler: "Haulin' Shanghai Surprise",
+      haulerId: 1,
+    },
+    {
+      id: 3,
+      shipName: "Boatload of Fun",
+      hauler: "Busan the Move",
+      haulerId: 2,
+    },
+    { id: 4, shipName: "Sailabration", hauler: "Busan the Move", haulerId: 2 },
+    { id: 5, shipName: "Nauti Buoy", hauler: "Rockin' Rotterdam", haulerId: 3 },
+    {
+      id: 6,
+      shipName: "Unsinkable II",
+      hauler: "Rockin' Rotterdam",
+      haulerId: 3,
+    },
+    {
+      id: 7,
+      shipName: "Anchors Aweigh",
+      hauler: "Antwerp-tunity Knocks",
+      haulerId: 4,
+    },
+    {
+      id: 8,
+      shipName: "Knotical Nonsense",
+      hauler: "Antwerp-tunity Knocks",
+      haulerId: 4,
+    },
+    {
+      id: 9,
+      shipName: "The Salty Seahorse",
+      hauler: "The Salty Mermaid",
+      haulerId: 8,
+    },
+    {
+      id: 10,
+      shipName: "Buoyant Beauty",
+      hauler: "The Salty Mermaid",
+      haulerId: 8,
+    },
+    { id: 11, shipName: "Shipshape", hauler: "Knot on Call", haulerId: 6 },
+    { id: 12, shipName: "Shipfaced", hauler: "Knot on Call", haulerId: 6 },
+    { id: 13, shipName: "Boaty McBoatface", hauler: "Anchorman", haulerId: 7 },
   ],
 };
 
@@ -64,5 +105,5 @@ export const getHaulers = () => {
 };
 
 export const getShips = () => {
-    return database.ships.map((ship) => ({ ...ship }));
-  };
+  return database.ships.map((ship) => ({ ...ship }));
+};
