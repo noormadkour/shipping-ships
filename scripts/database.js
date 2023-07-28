@@ -4,6 +4,7 @@ const database = {
     { id: 2, location: "Busan, South Korea", volume: "21.6" },
     { id: 3, location: "Rotterdam, The Netherlands", volume: "14.35" },
     { id: 4, location: "Antwerp, Belgium", volume: "12.04" },
+    { id: 5, location: "Sharm el-Sheikh, Egypt", volume: "32.7" },
   ],
   haulers: [
     {
@@ -28,10 +29,20 @@ const database = {
       id: 4,
       haulerName: "Antwerp-tunity Knocks",
       dock_location: "Antwerp, Belgium",
-      dock_id: 4
+      dock_id: 4,
     },
-    { id: 5, haulerName: "Seas the Day", dock_location: "Antwerp, Belgium",dock_id: 4,},
-    { id: 6, haulerName: "Knot on Call", dock_location: "Shanghai, China", dock_id: 1 },
+    {
+      id: 5,
+      haulerName: "Seas the Day",
+      dock_location: "Antwerp, Belgium",
+      dock_id: 4,
+    },
+    {
+      id: 6,
+      haulerName: "Knot on Call",
+      dock_location: "Shanghai, China",
+      dock_id: 1,
+    },
     {
       id: 7,
       haulerName: "Anchorman",

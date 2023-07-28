@@ -18,12 +18,21 @@ document.addEventListener("click", (dockClick) => {
   if (clickedDock.dataset.type === "dock") {
     const dockId = clickedDock.dataset.id;
     const haulers = getHaulers();
-    let haulerString = `The ${clickedDock.dataset.location} dock is currently unloading `;
+    let haulerString = "";
     for (const hauler of haulers) {
       if (parseInt(dockId) === hauler.dock_id) {
-        haulerString += `${hauler.haulerName} `;
+        haulerString += `${hauler.haulerName}, `;
       }
     }
-    window.alert(haulerString)
+    if (haulerString === "") {
+      window.alert(
+        `The ${clickedDock.dataset.location} dock is currently unloading nothing`
+      );
+    } else {
+      haulerString = haulerString.slice(0, -2);
+      window.alert(
+        `The ${clickedDock.dataset.location} dock is currently unloading ${haulerString}`
+      );
+    }
   }
 });
